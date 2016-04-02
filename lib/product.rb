@@ -1,20 +1,24 @@
 class Product
-  attr_accessor :id
-    @@id = 1
-    @@products = []
+  attr_reader :title
+
+  @@titles = []
+  @@products = []
 
   def initialize(options={})
-    @id = @@id
-    @@id += 1
-    @@products << self
-
     @title = options[:title]
-    @price = options[:price]
-    @stock = options[:stock]
+    add_to_products
+  end
+
+  def add_to_products
+    if @@titles.include? @title
+      # raise DuplicateProductError " #{title} is already in the database"
+    else
+      @@titles << @title
+      @@products << self
+    end
   end
 
   def self.all
     @@products
   end
-
 end
