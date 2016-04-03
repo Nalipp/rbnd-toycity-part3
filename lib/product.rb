@@ -15,7 +15,7 @@ class Product
   end
 
   def add_to_products
-    # @@products.each { |product| raise DuplicateProductError, " #{title} is already in the database" if product.title == title }
+    @@products.each { |product| raise DuplicateProductError, " #{title} is already in the database" if product.title == title }
     @@products << self
   end
 
@@ -24,15 +24,19 @@ class Product
   end
 
   def in_stock?
-    self.stock > 0 ? true : false
+    stock > 0
+  end
+
+  def reduce_stock
+    @stock -= 1
   end
 
   def include?(array)
-    self.array
+    array
   end
 
   def self.in_stock
-    @@products.map { |product| product if product.stock > 0 }
+    @@products.map { |product| product.in_stock? }
   end
 
   def self.all

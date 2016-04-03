@@ -13,7 +13,7 @@ class Customer
   end
 
   def add_to_customers
-    # @@customers.each { |customer| raise DuplicateCustomerError, " '#{name}' is already in the database" if customer.name == name }
+    @@customers.each { |customer| raise DuplicateCustomerError, " '#{name}' is already in the database" if customer.name == name }
     @@customers << self
   end
 
