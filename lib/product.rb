@@ -10,8 +10,8 @@ class Product
     add_to_products
   end
 
-  def self.product(num)
-    @@products[num]
+  def self.product
+    @@products
   end
 
   def add_to_products

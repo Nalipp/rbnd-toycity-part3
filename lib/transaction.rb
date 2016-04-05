@@ -1,12 +1,12 @@
 class Transaction
   attr_accessor :id, :customer, :product
 
-    @@id = 0
+    @@id = 1
     @@transactions = []
 
   def initialize(customer, product)
     @id = @@id
-    @id += 1
+    @@id += 1
 
     @customer = customer
     @product = product
@@ -17,7 +17,9 @@ class Transaction
     @@transactions
   end
 
-
+  def self.find(id)
+    @@transactions[id - 1]
+  end
 
   private
 

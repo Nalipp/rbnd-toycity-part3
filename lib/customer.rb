@@ -3,6 +3,7 @@ class Customer
 
   @@customers = []
 
+
   def initialize(options={})
     @name = options[:name]
     add_to_customers
@@ -19,5 +20,9 @@ class Customer
 
   def self.find_by_name(customer_name)
     @@customers.map { |customer| return customer if customer.name = customer_name}
+  end
+
+  def purchase(item_title)
+    Transaction.new(self, item_title)
   end
 end
