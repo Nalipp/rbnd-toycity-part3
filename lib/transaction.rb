@@ -34,7 +34,6 @@ class Transaction
   private
 
   def create_transaction
-    # raise ProductStockError, " '#{product.title}' has '#{product.stock}' stock" if product.stock <= 0
     @@transactions << self
     product.reduce_stock  # Method is found in product.rb
   end

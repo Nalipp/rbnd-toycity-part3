@@ -22,6 +22,7 @@ class Customer
   end
 
   def purchase(item_title)
+    raise ProductStockError, " '#{item_title.title}' has '#{item_title.stock}' stock" if item_title.stock <= 0
     Transaction.new(self, item_title)
   end
 end
