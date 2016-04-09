@@ -3,7 +3,6 @@ class Customer
 
   @@customers = []
 
-
   def initialize(options={})
     @name = options[:name]
     add_to_customers

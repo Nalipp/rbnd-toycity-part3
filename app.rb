@@ -50,6 +50,7 @@ puts transaction.id # Should return 1
 puts transaction.product == nanoblock # Should return true
 puts transaction.product == firehouse # Should return false
 puts transaction.customer == walter # Should return true
+puts transaction.sales_total #extra feature that includes purchase price plus 7% default sales tax
 
 puts nanoblock.stock # Should return 11
 
@@ -65,3 +66,5 @@ puts transaction2.product == nanoblock # Should return true
 
 walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+puts transaction.delete

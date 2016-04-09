@@ -1,0 +1,14 @@
+How long did you spend working on this project?
+  More than 8 hours. :p
+
+What was the most rewarding challenge you conquered?
+  Getting the different classes to work with each other. And finding ways to make the code more direct.
+
+What two additional features did you build? Why?
+  1. Added sales total to the transaction class, to be able to calculate the price plus sales tax.
+  2. Added delete function to transaction class, to be able to reverse transactions once they are created.
+
+Where do you still have room to grow?
+  I think I am too slow. It takes a while to figure out whats going on even in the code I wrote.
+  I think it would be helpful to have a database of well written code to read and play around with.
+  Also need to get a better grasp of when to place methods in private.

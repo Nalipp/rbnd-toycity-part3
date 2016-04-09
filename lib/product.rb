@@ -31,12 +31,8 @@ class Product
     @stock -= 1
   end
 
-  def include?(array)
-    array
-  end
-
   def self.in_stock
-    @@products.map { |product| product.in_stock? }
+    @@products.map { |product| product if product.in_stock? }
   end
 
   def self.all
